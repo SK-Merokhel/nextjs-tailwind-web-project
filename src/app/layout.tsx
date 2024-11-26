@@ -7,9 +7,16 @@ export const metadata: Metadata = {
   description: "Hospital website description",
 };
 
-export default function RootLayout({ children }: any) {
+interface RootLayoutProps {
+  children: React.ReactNode;
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
+      <head>
+        {/* Head tags can go here, for example title, meta tags, etc. */}
+      </head>
       <body className="flex flex-col min-h-screen">
         {/* Navbar added here, it will be on top of the page */}
         <Navbar />
